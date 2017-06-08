@@ -12,16 +12,13 @@
 		<!-- BootstrapのJS読み込み -->
 		<script src="common/js/bootstrap.min.js"></script>
 	</head>
-	<body>
-		<div class="container-fluid margin-b-40">
+	<body class="content">
+		<div class="container-fluid margin-b-30">
 			<div class="row" style="background-color:Navy;color:#fff;">
-				<div class="col-md-2"></div>
-				<div class="col-md-3">
-					<h1>Inter Library</h1>
+				<div class="col-xs-12">
+					<h1>Inter Library 蔵書管理システム</h1>
 				</div>
-				<div class="col-md-5">
-					<h2>蔵書管理システム</h2>
-				</div>
-				<div class="col-md-2"></div>
 			</div>
 		</div>
+		<table class="table table-condensed table-bordered table-striped table-hover table-responsive">
+		

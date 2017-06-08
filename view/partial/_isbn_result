@@ -1,0 +1,42 @@
+	<tr>
+		<th class="col-xs-2">図書ID</th><td class="col-xs-2">AAAAA</td>
+		<th class="col-xs-2">書籍JANコード</th><td class="col-xs-2"><?php $api::p($isbn); ?></td>
+		<th class="col-xs-2">資料区分</th><td class="col-xs-2"><?php $api::p($dcndl_materialType); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">書籍名</th><td colspan="5" class="col-xs-10"><?php $api::p($title); ?></td>
+	</tr>	
+	<tr>
+		<th class="col-xs-2">書籍名カナ</th><td colspan="5" class="col-xs-10"><?php $api::p($dcndl_titleTranscription); ?></td>
+	</tr>	
+	<tr>
+		<th class="col-xs-2">著者</th><td colspan="5" class="col-xs-10"><?php $api::p_arr($data_path->dc_creator); ?></td>
+	</tr>	
+	<tr>
+		<th class="col-xs-2">著者カナ</th><td colspan="5" class="col-xs-10"><?php $api::p_arr($data_path->dcndl_creatorTranscription); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">体裁</th><td colspan="5" class="col-xs-10"><?php $api::p($dcterms_extent); ?></td>
+	</tr>	
+	<tr>
+		<th class="col-xs-2">出版社</th><td colspan="3" class="col-xs-5"><?php $api::p($dc_publisher); ?></td>
+		<th class="col-xs-2">出版地</th><td class="col-xs-3"><?php $api::p_arr($data_path->dcndl_publicationPlace); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">シリーズ</th><td colspan="3" class="col-xs-5"><?php //$api::p($dc_publisher); ?></td>
+		<th class="col-xs-2">出版年</th><td class="col-xs-3"><?php $api::p($dc_date); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">件名</th><td colspan="3" class="col-xs-5"><?php //$api::p($dc_publisher); ?></td>
+		<th class="col-xs-2">価格</th><td class="col-xs-3"><?php $api::p($dcndl_price); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">予備分類</th><td class="col-xs-2">AAAAA</td>
+		<td colspan="2" class="col-xs-4"></td>
+		<th class="col-xs-2">請求記号</th><td colspan="3" class="col-xs-2"><?php $api::p($dc_subject_kigou); ?></td>
+	</tr>
+	<tr>
+		<th class="col-xs-2">NDC分類</th><td class="col-xs-2">AAAAA</td>
+		<td colspan="2" class="col-xs-4">AAAAA</td>
+		<td colspan="2" class="col-xs-4"><?php //$api::p($dc_subject_kigou); ?>AAAAA</td>
+	</tr>

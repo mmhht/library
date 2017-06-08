@@ -1,3 +1,12 @@
+.content{
+  width:80%;
+  margin:0 auto;
+}
+
+.table{
+  width: 100%;
+}
+
 /* ガター幅(要素間の距離)を調整するための汎用CSS */
 .row-0{ margin-left:0px;  margin-right:0px}
 .row-0 >div{ padding-right:0px;  padding-left:0px;}
@@ -27,3 +36,4 @@
 .padding-tb-30 >div{ padding-top:15px;  padding-bottom:15px;}
 .padding-tb-40 >div{ padding-top:20px;  padding-bottom:20px;}
 .padding-tb-50 >div{ padding-top:25px;  padding-bottom:25px;}
+

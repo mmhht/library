@@ -1,0 +1,5 @@
+	<tr>
+		<td class="col-xs-8"><?php $api::p($title); ?></td>
+		<td class="col-xs-2"><?php $api::p($dc_publisher); ?></td>
+		<td class="col-xs-2"><?php $api::p($dc_date); ?></td>
+	</tr>

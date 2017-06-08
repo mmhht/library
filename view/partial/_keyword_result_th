@@ -1,0 +1,5 @@
+	<tr>
+		<th class="col-xs-8">書籍名</th>
+		<th class="col-xs-2">出版社</th>
+		<th class="col-xs-2">出版年</th>
+	</tr>
