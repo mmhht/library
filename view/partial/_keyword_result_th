@@ -1,5 +1,7 @@
+<table class="table table-condensed table-bordered table-striped table-hover table-responsive">
 	<tr>
-		<th class="col-xs-8">書籍名</th>
+		<th class="col-xs-7">書籍名</th>
 		<th class="col-xs-2">出版社</th>
 		<th class="col-xs-2">出版年</th>
+		<th class="col-xs-1">詳細</th>
 	</tr>

@@ -3,8 +3,25 @@
   margin:0 auto;
 }
 
+h1 {
+  font-size: 1.8em;
+}
+
 .table{
   width: 100%;
+  tr{
+    th {
+      font-size: 0.8em;
+      background-color:#dcdcdc;
+    }
+    td {
+      font-size: 0.8em;
+      input {
+        font-size: 0.95em;
+        width:100%;
+      }
+    }
+  }
 }
 
 /* ガター幅(要素間の距離)を調整するための汎用CSS */

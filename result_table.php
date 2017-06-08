@@ -44,6 +44,7 @@ if($result_flag > 1){
 	$dc_date = (string)$item->dcterms_issued; // 出版年
 	include("/view/partial/_keyword_result_td");
 	}
+	require_once("/view/partial/_keyword_result_table_close");
 }
 ?>
 

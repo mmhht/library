@@ -1,42 +1,127 @@
+<form method="POST" action="#">
+<table class="table table-condensed table-bordered table-striped table-hover table-responsive">
 	<tr>
-		<th class="col-xs-2">図書ID</th><td class="col-xs-2">AAAAA</td>
-		<th class="col-xs-2">書籍JANコード</th><td class="col-xs-2"><?php $api::p($isbn); ?></td>
-		<th class="col-xs-2">資料区分</th><td class="col-xs-2"><?php $api::p($dcndl_materialType); ?></td>
+		<th class="col-xs-2">図書ID</th>
+		<td class="col-xs-2">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<th class="col-xs-2">書籍JANコード</th>
+		<td class="col-xs-2">
+			<input type="text" value="<?php $api::p($isbn); ?>" disabled="disabled">
+			<input type="hidden" name="isbn" value="<?php $api::p($isbn); ?>" />
+		</td>
+		<th class="col-xs-2">資料区分</th>
+		<td class="col-xs-2">
+			<input type="text" value="<?php $api::p($dcndl_materialType); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_materialType" value="<?php $api::p($dcndl_materialType); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">書籍名</th><td colspan="5" class="col-xs-10"><?php $api::p($title); ?></td>
+		<th class="col-xs-2">書籍名</th>
+		<td colspan="5" class="col-xs-10">
+			<input type="text" value="<?php $api::p($title); ?>" disabled="disabled">
+			<input type="hidden" name="title" value="<?php $api::p($title); ?>" />		
+		</td>
 	</tr>	
 	<tr>
-		<th class="col-xs-2">書籍名カナ</th><td colspan="5" class="col-xs-10"><?php $api::p($dcndl_titleTranscription); ?></td>
+		<th class="col-xs-2">書籍名カナ</th>
+		<td colspan="5" class="col-xs-10">
+			<input type="text" value="<?php $api::p($dcndl_titleTranscription); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_titleTranscription" value="<?php $api::p($dcndl_titleTranscription); ?>" />				
+		</td>
 	</tr>	
 	<tr>
-		<th class="col-xs-2">著者</th><td colspan="5" class="col-xs-10"><?php $api::p_arr($data_path->dc_creator); ?></td>
+		<th class="col-xs-2">著者</th><td colspan="5" class="col-xs-10">
+			<input type="text" value="<?php $api::p_arr($data_path->dc_creator); ?>" disabled="disabled">
+			<input type="hidden" name="author" value="<?php $api::p_arr($data_path->dc_creator); ?>" />
+		</td>
 	</tr>	
 	<tr>
-		<th class="col-xs-2">著者カナ</th><td colspan="5" class="col-xs-10"><?php $api::p_arr($data_path->dcndl_creatorTranscription); ?></td>
+		<th class="col-xs-2">著者カナ</th>
+		<td colspan="5" class="col-xs-10">
+			<input type="text" value="<?php $api::p_arr($data_path->dcndl_creatorTranscription); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_creatorTranscription" value="<?php $api::p_arr($data_path->dcndl_creatorTranscription); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">体裁</th><td colspan="5" class="col-xs-10"><?php $api::p($dcterms_extent); ?></td>
+		<th class="col-xs-2">体裁</th>
+		<td colspan="5" class="col-xs-10">
+			<input type="text" value="<?php $api::p($dcterms_extent); ?>" disabled="disabled">
+			<input type="hidden" name="dcterms_extent" value="<?php $api::p($dcterms_extent); ?>" />
+		</td>
 	</tr>	
 	<tr>
-		<th class="col-xs-2">出版社</th><td colspan="3" class="col-xs-5"><?php $api::p($dc_publisher); ?></td>
-		<th class="col-xs-2">出版地</th><td class="col-xs-3"><?php $api::p_arr($data_path->dcndl_publicationPlace); ?></td>
+		<th class="col-xs-2">出版社</th>
+		<td colspan="3" class="col-xs-5">
+			<input type="text" value="<?php $api::p($dc_publisher); ?>" disabled="disabled">
+			<input type="hidden" name="dc_publisher" value="<?php $api::p($dc_publisher); ?>" />
+		</td>
+		<th class="col-xs-2">出版地</th>
+		<td class="col-xs-3">
+			<input type="text" value="<?php $api::p_arr($data_path->dcndl_publicationPlace); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_publicationPlace" value="<?php $api::p_arr($data_path->dcndl_publicationPlace); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">シリーズ</th><td colspan="3" class="col-xs-5"><?php //$api::p($dc_publisher); ?></td>
-		<th class="col-xs-2">出版年</th><td class="col-xs-3"><?php $api::p($dc_date); ?></td>
+		<th class="col-xs-2">シリーズ</th>
+		<td colspan="3" class="col-xs-5">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />		
+		</td>
+		<th class="col-xs-2">出版年</th>
+		<td class="col-xs-3">
+			<input type="text" value="<?php $api::p($dc_date); ?>" disabled="disabled">
+			<input type="hidden" name="dc_date" value="<?php $api::p($dc_date); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">件名</th><td colspan="3" class="col-xs-5"><?php //$api::p($dc_publisher); ?></td>
-		<th class="col-xs-2">価格</th><td class="col-xs-3"><?php $api::p($dcndl_price); ?></td>
+		<th class="col-xs-2">件名</th>
+		<td colspan="3" class="col-xs-5">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<th class="col-xs-2">価格</th>
+		<td class="col-xs-3">
+			<input type="text" value="<?php $api::p($dcndl_price); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_price" value="<?php $api::p($dcndl_price); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">予備分類</th><td class="col-xs-2">AAAAA</td>
-		<td colspan="2" class="col-xs-4"></td>
-		<th class="col-xs-2">請求記号</th><td colspan="3" class="col-xs-2"><?php $api::p($dc_subject_kigou); ?></td>
+		<th class="col-xs-2">予備分類</th>
+		<td class="col-xs-2">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<td colspan="2" class="col-xs-4">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<th class="col-xs-2">請求記号</th>
+		<td colspan="3" class="col-xs-2">
+			<input type="text" value="<?php $api::p($dc_subject_kigou); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_price" value="<?php $api::p($dc_subject_kigou); ?>" />
+		</td>
 	</tr>
 	<tr>
-		<th class="col-xs-2">NDC分類</th><td class="col-xs-2">AAAAA</td>
-		<td colspan="2" class="col-xs-4">AAAAA</td>
-		<td colspan="2" class="col-xs-4"><?php //$api::p($dc_subject_kigou); ?>AAAAA</td>
+		<th class="col-xs-2">NDC分類</th>
+		<td class="col-xs-2">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<td colspan="2" class="col-xs-4">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
+		<td colspan="2" class="col-xs-4">
+			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
+		</td>
 	</tr>
+	<tr>
+		<td colspan="6" class="col-xs-12 text-center">
+			<input type="button" class="btn btn-lg btn-primary" value="登　録">
+		</td>
+	</tr>
+</table>
+</form>
