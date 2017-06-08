@@ -1,8 +1,9 @@
-		<div class="container-fluid padding-tb-20" style="background-color:Navy; color:#fff;">
-			<div class="row ">
-				<div class="col-md-2"></div>
-				<div class="col-md-8 text-center">Copyright 2017 InterArk.Co All Rights Reserved.</div>
-				<div class="col-md-2"></div>
+			<div class="container-fluid padding-tb-20" style="background-color:Navy; color:#fff;">
+				<div class="row ">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 text-center">Copyright 2017 InterArk.Co All Rights Reserved.</div>
+					<div class="col-md-2"></div>
+				</div>
 			</div>
 		</div>
 	</body>

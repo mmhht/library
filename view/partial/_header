@@ -13,6 +13,7 @@
 		<script src="common/js/bootstrap.min.js"></script>
 	</head>
 	<body class="content">
+	 <div class="main-container">
 		<div class="container-fluid margin-b-30">
 			<div class="row" style="background-color:Navy;color:#fff;">
 				<div class="col-xs-12">

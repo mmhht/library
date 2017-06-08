@@ -1,6 +1,10 @@
 .content{
   width:80%;
   margin:0 auto;
+  background-color: #c0c0c0;
+  .main-container {
+    background-color: #f8f8ff;
+  }
 }
 
 h1 {
@@ -12,7 +16,7 @@ h1 {
   tr{
     th {
       font-size: 0.8em;
-      background-color:#dcdcdc;
+      background-color:#ececec;
     }
     td {
       font-size: 0.8em;

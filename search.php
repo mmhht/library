@@ -5,7 +5,7 @@ include_once ("/view/partial/_header");
 <div class="container-fluid margin-b-40">
 	<div class="row">
 		<div class="col-xs-6">
-			<form method="POST" action="result_table.php" class="form-group">
+			<form method="POST" action="result.php" class="form-group">
 				<legend>
 					ISBN
 				</legend>
@@ -20,7 +20,7 @@ include_once ("/view/partial/_header");
 			</form>
 		</div>
 		<div class="col-xs-6">
-			<form method="POST" action="result_table.php" class="form-group">
+			<form method="POST" action="result.php" class="form-group">
 				<legend>
 					キーワード
 				</legend>
