@@ -3,9 +3,10 @@ class CALL_API {
 
 	// 検索実行時APIコール
 	public function callApi() {
-
 		// 定数読み込み
-		include_once ('CONSTANTS');
+		include_once ('config/CONSTANTS');
+		// DEBUGライブラリ読み込み
+		include_once ('IL_DEBUG');
 
 		// ISBN
 		if (isset($_POST['isbn'])) {
@@ -28,7 +29,7 @@ class CALL_API {
 		$channel = $xml -> channel;
 
 		// xml内容確認
-		// $this::pr($xml);
+		// IL_DEBUG::pr($xml);
 		
 		return $channel;
 	}
@@ -54,7 +55,7 @@ class CALL_API {
 		libxml_clear_errors();
 
 		// DEBUG		
-		// $this->pr($xml);
+		// IL_DEBUG::pr($xml);
 
 		return $data_path;
 	}
@@ -97,12 +98,4 @@ class CALL_API {
 	private function h($str) {
 		return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 	}
-
-	// xml内容確認
-	public static function pr($xml) {
-		echo "<pre>";
-		print_r($xml);
-		echo "</pre>";
-	}
-
 }

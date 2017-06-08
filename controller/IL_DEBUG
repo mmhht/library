@@ -1,0 +1,10 @@
+<?php
+class IL_DEBUG {
+
+	// xml内容確認
+	public static function pr($xml) {
+		echo "<pre>";
+		print_r($xml);
+		echo "</pre>";
+	}	
+}

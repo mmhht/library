@@ -1,4 +1,4 @@
-<form method="POST" action="#">
+<form method="POST" action="regist_book.php">
 <table class="table table-condensed table-bordered table-striped table-hover table-responsive">
 	<tr>
 		<th class="col-xs-2">図書ID</th>
@@ -100,7 +100,7 @@
 		<th class="col-xs-2">請求記号</th>
 		<td colspan="3" class="col-xs-2">
 			<input type="text" value="<?php $api::p($dc_subject_kigou); ?>" disabled="disabled">
-			<input type="hidden" name="dcndl_price" value="<?php $api::p($dc_subject_kigou); ?>" />
+			<input type="hidden" name="dc_subject_kigou" value="<?php $api::p($dc_subject_kigou); ?>" />
 		</td>
 	</tr>
 	<tr>
@@ -120,7 +120,7 @@
 	</tr>
 	<tr>
 		<td colspan="6" class="col-xs-12 text-center">
-			<input type="button" class="btn btn-lg btn-primary" value="登　録">
+			<input type="submit" class="btn btn-lg btn-primary" value="登　録">
 		</td>
 	</tr>
 </table>
