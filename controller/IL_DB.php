@@ -16,9 +16,11 @@ class IL_DB {
         }
     }
  
-  /**
-   * 書籍データをDBに保存
-   */
+    /**
+     * 書籍データをDBに保存
+     *
+     * @param $data
+     */
     function saveDbBookData($data){
  
         // データの保存
@@ -37,12 +39,13 @@ class IL_DB {
       $smt->bindParam(':dc_subject_kigou',$data['dc_subject_kigou'], PDO::PARAM_STR);
       
       $smt->execute();
- 
     }
     
-  /**
-   * 書籍データをDBから読み込み
-   */
+    /**
+     * 全書籍データをDBから読み込み
+     *
+     * @return array
+     */
     function getDbBookData(){
  
       // データの取得
@@ -53,4 +56,40 @@ class IL_DB {
       
       return $result;  
     }
+    
+    /**
+     * 個別書籍データをDBから読み込み
+     *
+     * @param $book_id
+     * @return mixed
+     */
+    function getABookData($book_id){
+ 
+      // データの取得
+      $id_num = (int)$book_id;
+      $sql = "select * from books where id = $id_num";
+      $smt = $this->pdo->prepare($sql);
+      $result = $smt->execute();
+      
+      // 実行結果を配列に返す
+      $result = $smt->fetchAll(PDO::FETCH_ASSOC);
+
+      return $result[0];  
+    }
+    
+    /**
+     * 登録時最新ID仮取得
+     *
+     * @return mixed
+     */
+    	function getIdCount(){
+      // 次のauto_increment値
+      $smt = $this->pdo->prepare('SELECT auto_increment FROM information_schema.tables WHERE table_name = "books"');
+      $smt->execute();
+      // 実行結果を配列に返す。
+      $result = $smt->fetchAll(PDO::FETCH_ASSOC);
+      
+      return $result[0]['auto_increment'];
+    	}
+    	
 }

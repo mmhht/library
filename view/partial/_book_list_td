@@ -1,12 +1,16 @@
 	<tr>
 		<td class="col-xs-1"><?php CALL_API::p($id); ?></td>
 		<td class="col-xs-1"><?php CALL_API::p($isbn); ?></td>
-		<td class="col-xs-2"><?php CALL_API::p($title); ?></td>
-		<td class="col-xs-2"><?php CALL_API::p($dcndl_titleTranscription); ?></td>
+		<td class="col-xs-3"><?php CALL_API::p($title); ?></td>
 		<td class="col-xs-1"><?php CALL_API::p($author); ?></td>
-		<td class="col-xs-1"><?php CALL_API::p($dcndl_creatorTranscription); ?></td>
 		<td class="col-xs-1"><?php CALL_API::p($dcterms_extent); ?></td>
-		<td class="col-xs-1"><?php CALL_API::p($dc_publisher); ?></td>
+		<td class="col-xs-2"><?php CALL_API::p($dc_publisher); ?></td>
 		<td class="col-xs-1"><?php CALL_API::p($dc_date); ?></td>
 		<td class="col-xs-1"><?php CALL_API::p($dcndl_price); ?></td>
+		<td class="col-xs-1 text-center">
+			<form method="POST" action="result.php" class="form">
+				<input type="hidden" name="book_id" value="<?php CALL_API::p($id); ?>" />
+				<input type="submit" class="btn btn-xs btn-primary" value="詳細">
+			</form>
+		</td>
 	</tr>

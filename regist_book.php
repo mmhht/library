@@ -1,7 +1,7 @@
 <?php
 include_once("config/CONSTANTS");
 include_once("controller/IL_DEBUG");
-include_once("controller/IL_DB");
+include_once("controller/IL_DB.php");
 
 if(isset($_POST)){
 	// IL_DEBUG::pr($_POST);

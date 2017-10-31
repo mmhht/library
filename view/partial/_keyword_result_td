@@ -1,8 +1,12 @@
 	<tr>
+		<td class="col-xs-1 text-center"><?php $api::p($item_count); ?></td>
 		<td class="col-xs-7"><?php $api::p($title); ?></td>
 		<td class="col-xs-2"><?php $api::p($dc_publisher); ?></td>
-		<td class="col-xs-2"><?php $api::p($dc_date); ?></td>
-		<td class="col-xs-1">
-			<a href="#" type="button" class="btn btn-xs btn-primary" value="詳細">詳細</a>
+		<td class="col-xs-1 text-center"><?php $api::p($dc_date); ?></td>
+		<td class="col-xs-1 text-center">
+			<form method="POST" action="result.php" class="form">
+				<input type="hidden" name="ndl_link" value="<?php $api::p($link); ?>" />
+				<input type="submit" class="btn btn-xs btn-primary" value="詳細">
+			</form>
 		</td>
 	</tr>

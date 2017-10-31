@@ -2,12 +2,12 @@
 	<tr>
 		<th class="col-xs-1">ID</th>
 		<th class="col-xs-1">ISBN</th>
-		<th class="col-xs-2">書名</th>
-		<th class="col-xs-2">書名カナ</th>
+		<th class="col-xs-3">書名</th>
 		<th class="col-xs-1">著者</th>
-		<th class="col-xs-1">著者カナ</th>
 		<th class="col-xs-1">体裁</th>
-		<th class="col-xs-1">出版社</th>
+		<th class="col-xs-2">出版社</th>
 		<th class="col-xs-1">出版年</th>
 		<th class="col-xs-1">価格</th>
+		<th class="col-xs-1"></th>
+
 	</tr>

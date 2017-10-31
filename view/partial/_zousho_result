@@ -3,8 +3,8 @@
 	<tr>
 		<th class="col-xs-2">図書ID</th>
 		<td class="col-xs-2">
-			<input type="text" value="<?php $api::p($new_book_id); ?>" disabled="disabled">
-			<input type="hidden" name="" value="<?php //$api::p($new_book_id); ?>" />
+			<input type="text" value="<?php $api::p($id); ?>" disabled="disabled">
+			<input type="hidden" name="" value="<?php //$api::p($id); ?>" />
 		</td>
 		<th class="col-xs-2">書籍JANコード</th>
 		<td class="col-xs-2">
@@ -33,15 +33,15 @@
 	</tr>	
 	<tr>
 		<th class="col-xs-2">著者</th><td colspan="5" class="col-xs-10">
-			<input type="text" value="<?php $api::p_arr($data_path->dc_creator); ?>" disabled="disabled">
-			<input type="hidden" name="author" value="<?php $api::p_arr($data_path->dc_creator); ?>" />
+			<input type="text" value="<?php $api::p($dc_creator); ?>" disabled="disabled">
+			<input type="hidden" name="author" value="<?php $api::p($dc_creator); ?>" />
 		</td>
 	</tr>	
 	<tr>
 		<th class="col-xs-2">著者カナ</th>
 		<td colspan="5" class="col-xs-10">
-			<input type="text" value="<?php $api::p_arr($data_path->dcndl_creatorTranscription); ?>" disabled="disabled">
-			<input type="hidden" name="dcndl_creatorTranscription" value="<?php $api::p_arr($data_path->dcndl_creatorTranscription); ?>" />
+			<input type="text" value="<?php $api::p($dcndl_creatorTranscription); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_creatorTranscription" value="<?php $api::p($dcndl_creatorTranscription); ?>" />
 		</td>
 	</tr>
 	<tr>
@@ -59,8 +59,8 @@
 		</td>
 		<th class="col-xs-2">出版地</th>
 		<td class="col-xs-3">
-			<input type="text" value="<?php $api::p_arr($data_path->dcndl_publicationPlace); ?>" disabled="disabled">
-			<input type="hidden" name="dcndl_publicationPlace" value="<?php $api::p_arr($data_path->dcndl_publicationPlace); ?>" />
+			<input type="text" value="<?php $api::p($dcndl_publicationPlace); ?>" disabled="disabled">
+			<input type="hidden" name="dcndl_publicationPlace" value="<?php $api::p($dcndl_publicationPlace); ?>" />
 		</td>
 	</tr>
 	<tr>
@@ -116,11 +116,6 @@
 		<td colspan="2" class="col-xs-4">
 			<input type="text" value="<?php $api::p("〇〇〇〇"); ?>" disabled="disabled">
 			<input type="hidden" name="" value="<?php //$api::p("〇〇〇〇"); ?>" />
-		</td>
-	</tr>
-	<tr>
-		<td colspan="6" class="col-xs-12 text-center">
-			<input type="submit" class="btn btn-lg btn-primary" value="登　録">
 		</td>
 	</tr>
 </table>

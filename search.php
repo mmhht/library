@@ -1,5 +1,6 @@
 <?php
-include_once ("/view/partial/_header");
+include_once ("/view/partial/_header"); // ヘッダー
+include_once ("/view/partial/_gNavi"); // グロナビ
 ?>
 <table class="table table-condensed table-bordered table-striped table-hover table-responsive">
 <div class="container-fluid margin-b-40">
